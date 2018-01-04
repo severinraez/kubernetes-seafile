@@ -1,4 +1,4 @@
-## Seafile on kubernetes
+# Seafile on kubernetes
 
 Based on https://github.com/haiwen/seafile-docker.
 
@@ -7,13 +7,13 @@ Things done differently:
 * No SSL
 * No support for seafile <= 6.0.6
 
-## Building
+# Building
 
     bin/build.sh <image-name>
 
-## Maintenance
+# Maintenance
 
-# Updating the base images' files
+## Updating the base images' files
 
 To import the image files from https://github.com/haiwen/seafile-docker, choose a tag and run
 
