@@ -19,4 +19,4 @@ git clone --branch $ref git@github.com:haiwen/seafile-docker.git
 cd seafile-docker
 
 set -x
-cp -pr image $project_root/base-images
+cp -pr image $project_root/images/base-images
