@@ -19,6 +19,3 @@ To import the image files from https://github.com/haiwen/seafile-docker, choose 
 
     tag=v6.2.2
     bin/update-base-image-files.sh $tag
-    
-
-

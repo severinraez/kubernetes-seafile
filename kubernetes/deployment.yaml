@@ -1,0 +1,34 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata: 
+  name: seafile
+  namespace: seafile
+spec: 
+  replicas: 1
+  template: 
+    metadata: 
+      labels: 
+        name: seafile
+    spec: 
+      containers: 
+        - image: "registry:30000/gischterchibel.ch/seafile"
+          name: seafile
+          ports:
+            - containerPort: 80
+            - containerPort: 443
+          env:
+            - name: ADMIN_EMAIL
+              valueFrom:
+                secretKeyRef:
+                  name: admin-credentials
+                  key: user
+            - name: ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: admin-credentials
+                  key: password
+      volumes:
+        - name: "admin-txt"
+          secret:
+            secretName: "seafile-admin-txt"
