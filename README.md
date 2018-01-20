@@ -1,3 +1,7 @@
+# Discontinued for now
+
+I fear this would be a nightmare to maintain so I am looking into alternative solutions.
+
 # Seafile on kubernetes
 
 Based on https://github.com/haiwen/seafile-docker.
